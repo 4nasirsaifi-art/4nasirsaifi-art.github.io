@@ -1,0 +1,137 @@
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasir Ali | DevOps Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        header {
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: #58a6ff;
+        }
+        .tagline {
+            color: #8b949e;
+            font-size: 1.1rem;
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .links a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.95rem;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+        .project {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+        .project h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #e6edf3;
+        }
+        .project p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .tech {
+            font-size: 0.8rem;
+            color: #7ee787;
+            margin-bottom: 12px;
+        }
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nasir Ali</h1>
+            <p class="tagline">Aspiring DevOps Engineer | Cloud & Automation Enthusiast</p>
+            <div class="links">
+                <a href="https://github.com/4nasirsaifi-art" target="_blank">GitHub</a>
+                <a href="mailto:nasirsaifi740@gmail.com">Email</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Portfolio Website — Automated CI/CD to AWS S3</h3>
+                <p>Static website with a fully automated deployment pipeline. Every push to main triggers GitHub Actions to sync files directly to an S3 bucket configured for static website hosting.</p>
+                <p class="tech">AWS S3 · IAM · GitHub Actions · CI/CD</p>
+                <div class="project-links">
+                    <a href="http://nasir-portfolio-site.s3-website.ap-south-1.amazonaws.com" target="_blank">Live Demo →</a>
+                    <a href="https://github.com/4nasirsaifi-art/my-portfolio-sites" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Dockerized App Deployment on AWS EC2</h3>
+                <p>End-to-end pipeline that builds a Docker image, pushes it to DockerHub, then automatically deploys it to an EC2 instance via SSH — all triggered by a single code push.</p>
+                <p class="tech">Docker · AWS EC2 · VPC · IAM · GitHub Actions</p>
+                <div class="project-links">
+                    <a href="https://github.com/4nasirsaifi-art/docker-ec2-deploy" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>More projects coming soon.</p>
+        </footer>
+    </div>
+</body>
+</html>
+EOF
