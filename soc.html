@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasir Ali | SOC Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: #e6edf3;
+        }
+        header {
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: #e3b341;
+        }
+        .tagline {
+            color: #8b949e;
+            font-size: 1.1rem;
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .links a {
+            color: #e3b341;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.95rem;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+        .project {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+        .project h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #e6edf3;
+        }
+        .project p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .tech {
+            font-size: 0.8rem;
+            color: #e3b341;
+            margin-bottom: 12px;
+        }
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back-link" href="index.html">← Back to home</a>
+
+        <header>
+            <h1>Nasir Ali</h1>
+            <p class="tagline">Aspiring SOC Analyst | Network Defense &amp; Log Analysis</p>
+            <div class="links">
+                <a href="https://github.com/4nasirsaifi-art" target="_blank">GitHub</a>
+                <a href="mailto:4nasirsaifi@gmail.com">Email</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+            <div class="project">
+                <h3>Simulating and Detecting a Brute-Force SSH Attack on Azure</h3>
+                <p>Provisioned an Ubuntu VM on Azure with a locked-down NSG, then used Hydra to run a brute-force attack against its SSH service from a separate machine. Investigated the resulting authentication logs to identify the attack signature and observed SSH's built-in throttling defenses (MaxAuthTries, MaxStartups) activating in real time.</p>
+                <p class="tech">Azure · Hydra · SSH · Linux Log Analysis</p>
+                <div class="project-links">
+                    <a href="https://github.com/4nasirsaifi-art/soc-projects" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Network Traffic Analysis with Wireshark &amp; Nmap</h3>
+                <p>Captured live packets to establish a baseline of normal traffic (TLS, DNS, ARP, keep-alives), then generated a port-scanning signature using Nmap and identified it directly in the packet capture — including service version and OS detection.</p>
+                <p class="tech">Wireshark · Nmap · Packet Analysis</p>
+                <div class="project-links">
+                    <a href="https://github.com/4nasirsaifi-art/soc-projects" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Brute-Force Detection Using Splunk SPL</h3>
+                <p>Ingested 5,000+ synthetic authentication events into Splunk Cloud and wrote SPL queries (stats, sort, dedup, top, rare) to surface a brute-force pattern by user and source IP, then built a basic dashboard and a triggered alert around it.</p>
+                <p class="tech">Splunk · SPL · SIEM</p>
+                <div class="project-links">
+                    <a href="https://github.com/4nasirsaifi-art/soc-projects" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>More projects coming soon.</p>
+        </footer>
+    </div>
+</body>
+</html>

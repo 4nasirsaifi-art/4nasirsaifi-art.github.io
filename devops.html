@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasir Ali | DevOps Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: #e6edf3;
+        }
+        header {
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: #58a6ff;
+        }
+        .tagline {
+            color: #8b949e;
+            font-size: 1.1rem;
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .links a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.95rem;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+        .project {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+        .project h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #e6edf3;
+        }
+        .project p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .tech {
+            font-size: 0.8rem;
+            color: #7ee787;
+            margin-bottom: 12px;
+        }
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back-link" href="index.html">← Back to home</a>
+
+        <header>
+            <h1>Nasir Ali</h1>
+            <p class="tagline">Aspiring DevOps Engineer | Cloud &amp; Automation Enthusiast</p>
+            <div class="links">
+                <a href="https://github.com/4nasirsaifi-art" target="_blank">GitHub</a>
+                <a href="mailto:4nasirsaifi@gmail.com">Email</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+            <div class="project">
+                <h3>Portfolio Website — Automated CI/CD to AWS S3</h3>
+                <p>Static website with a fully automated deployment pipeline. Every push to main triggers GitHub Actions to sync files directly to an S3 bucket configured for static website hosting.</p>
+                <p class="tech">AWS S3 · IAM · GitHub Actions · CI/CD</p>
+                <div class="project-links">
+                    <a href="http://nasir-portfolio-site.s3-website.ap-south-1.amazonaws.com" target="_blank">Live Demo →</a>
+                    <a href="https://github.com/4nasirsaifi-art/my-portfolio-sites" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+            <div class="project">
+    <h3>End-to-End DevOps Pipeline — Terraform + Docker + Azure + CI/CD</h3>
+    <p>Provisioned complete Azure infrastructure (VNet, Subnet, NSG, VM) using Terraform, then built an automated CI/CD pipeline with GitHub Actions to containerize and deploy a Python application to the Terraform-provisioned VM.</p>
+    <p class="tech">Terraform · Azure · Docker · GitHub Actions · IaC</p>
+    <div class="project-links">
+        <a href="https://github.com/4nasirsaifi-art/deploy" target="_blank">GitHub</a>
+    </div>
+</div>
+
+            <div class="project">
+                <h3>Dockerized App Deployment on AWS EC2</h3>
+                <p>End-to-end pipeline that builds a Docker image, pushes it to DockerHub, then automatically deploys it to an EC2 instance via SSH — all triggered by a single code push.</p>
+                <p class="tech">Docker · AWS EC2 · VPC · IAM · GitHub Actions</p>
+                <div class="project-links">
+                    <a href="https://github.com/4nasirsaifi-art/docker-ec2-deploy" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+<div class="project">
+    <h3>Automated CI/CD Deployment to Azure VM</h3>
+    <p>Dockerized Flask application deployed to an Azure Virtual Machine, with GitHub Actions automatically building, pushing to DockerHub, and redeploying via SSH on every code push.</p>
+    <p class="tech">Docker · Azure VM · GitHub Actions · CI/CD</p>
+    <div class="project-links">
+        <a href="https://github.com/4nasirsaifi-art/flask-app" target="_blank">GitHub Repo →</a>
+    </div>
+</div>
+<div class="project">
+                <h3>Dockerized Nginx App with GitHub Actions</h3>
+                <p>Automated CI/CD pipeline that builds a custom Nginx web application container, pushes the image to Docker Hub, and serves a live static page upon every code push.</p>
+                <p class="tech">Docker · Nginx · GitHub Actions · CI/CD · Docker Hub</p>
+                <div class="project-links">
+                    <a href="https://hub.docker.com/r/4nasir/mini-project" target="_blank">Docker Hub →</a>
+                    <a href="https://github.com/4nasirsaifi-art/mini-project" target="_blank">GitHub Repo →</a>
+                </div>
+            </div>
+<div class="project">
+    <h3>Dockerized Nginx App with CI/CD + Auto-Deployment</h3>
+    <p>Automated build-push-deploy pipeline that builds a Docker image, pushes it to DockerHub via GitHub Actions, and uses Watchtower to auto-detect and deploy new images — achieving zero-touch continuous deployment on every code push.</p>
+    <p class="tech">Docker · Nginx · GitHub Actions · DockerHub · Watchtower</p>
+    <div class="project-links">
+        <a href="https://hub.docker.com/r/4nasir/nginx-app" target="_blank">Docker Hub →</a>
+        <a href="https://github.com/4nasirsaifi-art/localtest" target="_blank">GitHub Repo →</a>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>More projects coming soon.</p>
+        </footer>
+    </div>
+</body>
+</html>
